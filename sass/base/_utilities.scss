@@ -1,0 +1,21 @@
+.u-center-text{
+    text-align: center;
+}
+
+.u-margin-bottom-big{
+    margin-bottom: 6rem;
+    @include devices(mobile){
+        margin-bottom:3rem ;
+    }
+}
+
+.u-margin-bottom-medium{
+    margin-bottom: 4rem;
+    @include devices(mobile){
+        margin-bottom:2rem ;
+    }
+}
+
+.u-margin-bottom-small{
+    margin-bottom: 1.5rem;
+}

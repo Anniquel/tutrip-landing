@@ -1,0 +1,179 @@
+.section-about {
+  padding: 10rem;
+  @include devices(tablet) {
+    padding: 150px 70px 130px 70px;
+    box-sizing: border-box;
+  }
+  @include devices(mobile) {
+    padding: 150px 40px 130px 40px;
+    box-sizing: border-box;
+  }
+}
+
+.section-features {
+  padding: 12rem 7%;
+  background: linear-gradient(to bottom, $bg-variation, $bg);
+  background-size: cover;
+
+  transform: skewY(7deg);
+
+  @include devices(tablet) {
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  @include devices(mobile) {
+    padding: 40px;
+    box-sizing: border-box;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: nowrap;
+
+    @include devices(tablet) {
+      gap: 70px;
+    }
+    @include devices(mobile) {
+      flex-direction: column;
+    }
+  }
+
+  & > * {
+    transform: skewY(-7deg);
+  }
+}
+
+.section-tours {
+  padding: 5rem 7%;
+  @include devices(mobile) {
+    padding: 40px;
+    box-sizing: border-box;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: nowrap;
+    @include devices(mobile) {
+      flex-direction: column;
+    }
+    @include devices(tablet) {
+      gap: 25px;
+    }
+  }
+}
+
+.section-stories {
+  padding: 4rem 0;
+  position: relative;
+  @include devices(mobile) {
+    padding: 40px;
+    box-sizing: border-box;
+  }
+}
+
+.section-book {
+  padding: 80px 130px;
+  height: 100vh;
+  box-sizing: border-box;
+  background-image: linear-gradient(to right bottom, $p-light, $p-dark);
+
+  @include devices(tablet) {
+    padding: 0;
+    margin-top: 80px;
+    height: 50vh;
+  }
+
+  @include devices(mobile) {
+    padding: 0;
+    margin-top: 80px;
+  }
+}
+
+.book {
+  background-image: linear-gradient(
+      105deg,
+      rgba(white, 0.7) 0%,
+      rgba(white, 0.9) 50%,
+      transparent 50%
+    ),
+    url(../../Img/beach-ge1281bbf1_1920.jpg);
+  background-size: 100%;
+  box-shadow: 0 1.5rem 4rem rgba($black, 0.15);
+  height: 100%;
+  border-radius: 5px;
+
+  @include devices(tablet) {
+    background-image: linear-gradient(
+        105deg,
+        rgba(white, 0.7) 0%,
+        rgba(white, 0.9) 70%,
+        transparent 70%
+      ),
+      url(../../Img/beach-ge1281bbf1_1920.jpg);
+  }
+  @include devices(mobile) {
+    background-image: linear-gradient(
+        105deg,
+        rgba(white, 0.7) 0%,
+        rgba(white, 0.9) 70%,
+        transparent 70%
+      ),
+      url(../../Img/beach-ge1281bbf1_1920.jpg);
+  }
+
+  &__form {
+    width: 50%;
+    padding: 2rem 4rem;
+  }
+}
+
+.footer {
+  background-color: $bg-variation;
+  padding: 6rem 2rem 0.4rem 2rem;
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: right;
+
+  &__logo-box {
+    text-align: center;
+    width: 100px;
+  }
+
+  &__list {
+    list-style: none;
+  }
+  &__item {
+    display: inline-block;
+    &:not(:last-child) {
+      margin-right: 1.5rem;
+    }
+  }
+
+  &__link {
+    color: $black;
+    margin-bottom: 10px;
+    font-size: 14px;
+    &:link,
+    &:visited {
+      color: $black;
+      text-decoration: none;
+      text-transform: uppercase;
+      display: inline-block;
+    }
+
+    &:hover,
+    &:active {
+      color: $color-primary;
+    }
+  }
+  &__copyright {
+    color: $black;
+    font-size: 15px;
+    position: relative;
+    top: 30px;
+    left: 10px;
+    @include devices(mobile) {
+      top: 0;
+    }
+  }
+}

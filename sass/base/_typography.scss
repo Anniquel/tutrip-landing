@@ -1,0 +1,83 @@
+
+body {
+    font-family: "Josefin";
+    font-weight: 400;
+  }
+
+  
+@font-face {
+  font-family: "Josefin";
+  src: url("/Fonts/JosefinSans-VariableFont_wght.ttf") format("truetype");
+  font-display: block;
+}
+
+
+.heading-primary {
+    color: $black;
+
+    @include devices(mobile){
+      width:98%;
+    }
+    
+  
+    &--main {
+      display: block;
+      font-size: 30px;
+      font-weight: 400;
+      letter-spacing: 35px;
+      text-transform: uppercase;
+      margin-bottom: 40px;
+  
+      animation: moveInLeft 2s ease-out;
+    }
+  
+    &--sub {
+      display: block;
+      font-size: 55px;
+      font-weight: bolder;
+      animation: moveInRight 2s ease-out;
+      @include devices(mobile){
+        font-size: 25px;
+      }
+    }
+
+  }
+
+  .heading-secondary{
+    position: relative;
+    z-index: 1;
+    background-image: linear-gradient(to right, #3f85b2, $p-dark);
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight:700;
+    display: inline-block;
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: .2rem;
+    transition: all .2s;
+
+    @include devices(mobile){
+      font-size: 26px;
+    }
+    
+    &:hover{
+      transform: skewX(8deg) scale(1.1);
+      text-shadow: .5rem 1rem 2rem rgba($black, .2);
+    } 
+  }
+
+  .heading-tertiary{
+    font-size: $default-font-size;
+    font-weight: 700;
+    color: $black;
+  }
+
+  .paragraph{
+    font-size: 1.1rem;
+    color: $black;
+    
+    &:not(:last-child){
+      margin-bottom: 3rem; ;
+    }
+  }
+  

@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+}
+
+header {
+  height: 90vh;
+  position: relative;
+  background: linear-gradient(to bottom, $bg, $bg-variation);
+  clip-path: polygon(0 0, 100% 0, 100% 120%, 0 70%);
+
+  @include devices(mobile) {
+    clip-path: none;
+  }
+  @include devices(tablet) {
+    clip-path: none;
+  }
+}
+
+img {
+  width: 100%;
+}
+
+button,
+a {
+  cursor: pointer;
+  text-decoration: none;
+}

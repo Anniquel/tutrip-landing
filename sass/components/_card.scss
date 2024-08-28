@@ -1,0 +1,130 @@
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 28rem;
+
+  &__side {
+    font-size: 2rem;
+
+    height: 28rem;
+    transition: all 0.8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba($black, 0.15);
+
+    &--front {
+      background-color: $white;
+    }
+
+    &--back {
+      transform: rotateY(180deg);
+      &-1 {
+        background-image: linear-gradient(
+          to right bottom,
+          powderblue,
+          $p-light
+        );
+      }
+      &-2 {
+        background-image: linear-gradient(
+          to right bottom,
+          white,
+          $bg-variation
+        );
+      }
+      &-3 {
+        background-image: linear-gradient(
+          to right bottom,
+          powderblue,
+          $color-grey-light
+        );
+      }
+    }
+  }
+
+  @include devices(mobile) {
+    &:active &__side--front {
+      transform: rotateY(-180deg);
+    }
+
+    &:active &__side--back {
+      transform: rotateY(0);
+    }
+  }
+
+  &:hover &__side--front, &:active &__side--front {
+    transform: rotateY(-180deg);
+  }
+  &:hover &__side--back,  &:active &__side--back {
+    transform: rotateY(0);
+  }
+
+  &__picture {
+    background-size: cover;
+    height: 12rem;
+    background-blend-mode: screen;
+
+    &--1 {
+      background-image: url(../../Img/AdobeStock_CascadaLimon.jpeg);
+    }
+    &--2 {
+      background-image: url(../../Img/AdobeStock_Bayahibe.jpeg);
+    }
+
+    &--3 {
+      background-image: url(../../Img/45556ce332d5b9d50128b39eab355bb7.jpg);
+    }
+  }
+
+  &__heading {
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+    color: $black;
+  }
+  &__details {
+    font-size: 1rem;
+    text-align: center;
+    color: $black;
+
+    ul {
+      list-style: none;
+      padding: 0;
+      li {
+        padding: 8px 0px;
+        border-bottom: 1px solid rgba($black, 0.25);
+      }
+    }
+  }
+
+  &__price-box {
+    text-align: center;
+    color: $black;
+    height: 100%;
+    padding: 30% 0%;
+  }
+  &__price-only {
+    font-size: 20px;
+  }
+  &__price-value {
+    font-weight: bold;
+    color: $blue-dark;
+  }
+  &__btn--action {
+    background-color: rgba($white, 0.45);
+    border-radius: 30px;
+    font-family: "Josefin";
+    font-size: 20px;
+    font-weight: 600;
+    color: $p-dark;
+    padding: 10px;
+    border: 1px solid $p-dark;
+  }
+}

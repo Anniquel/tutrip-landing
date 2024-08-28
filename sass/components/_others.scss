@@ -1,0 +1,70 @@
+.logo-box {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  width: 70px;
+
+  @include devices(tablet) {
+    position: relative;
+    top: 15px;
+    left: 15px;
+  }
+  @include devices(mobile) {
+    position: relative;
+    top: 15px;
+    left: 15px;
+  }
+}
+
+.text-box {
+  position: absolute;
+  top: 40%;
+  left: 15%;
+  transform: translateY(-50%);
+  width: 30%;
+
+  @include devices(tablet) {
+    position: static;
+    width: auto;
+    transform: translateY(0);
+    margin-bottom: 200px;
+    text-align: center;
+  }
+  @include devices(mobile) {
+    position: static;
+    width: auto;
+    transform: translateY(0);
+    margin-bottom: 200px;
+    text-align: center;
+  }
+}
+
+.main-image-box {
+  position: absolute;
+  top: 5%;
+  right: 0%;
+  bottom: 5%;
+  width: 48%;
+  min-width: 600px;
+  animation: moveInRight 2s ease-out;
+
+  @include devices(tablet) {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    min-width: 65%;
+  }
+  @include devices(mobile) {
+    position: static;
+    min-width: 100%;
+  }
+}
+
+.basic-input {
+  border-radius: 20px;
+  height: 30px;
+  padding: 3px 10px;
+  border: none;
+  font-family: "Josefin";
+  margin-top: 5px;
+}
